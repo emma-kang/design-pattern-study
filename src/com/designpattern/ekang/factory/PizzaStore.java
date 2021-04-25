@@ -1,19 +1,11 @@
 package com.designpattern.ekang.factory;
 
-public class PizzaStore {
-    // give reference to SimplePizzaFactory
-    SimplePizzaFactory factory;
-
-    public PizzaStore(SimplePizzaFactory factory) {
-        this.factory = factory;
-    }
-
+// Franchising the pizza store
+public abstract class PizzaStore {
     public Pizza orderPizza(String type) {
         Pizza pizza;
 
-        // No concrete instantiation
-        // Replaced createPizza method on the factory object
-        pizza = factory.createPizza(type);
+        pizza = createPizza(type);
 
         pizza.prepare();
         pizza.bake();
@@ -22,4 +14,8 @@ public class PizzaStore {
 
         return pizza;
     }
+
+    // Moved the factory object to this method
+    // act as factory
+    protected abstract Pizza createPizza(String type);
 }
