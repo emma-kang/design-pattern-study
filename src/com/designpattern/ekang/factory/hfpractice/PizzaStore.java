@@ -1,4 +1,4 @@
-package com.designpattern.ekang.factory;
+package com.designpattern.ekang.factory.hfpractice;
 
 // Franchising the pizza store
 public abstract class PizzaStore {

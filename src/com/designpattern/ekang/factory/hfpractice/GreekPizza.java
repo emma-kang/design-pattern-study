@@ -1,4 +1,4 @@
-package com.designpattern.ekang.factory;
+package com.designpattern.ekang.factory.hfpractice;
 
 public class GreekPizza extends Pizza {
 

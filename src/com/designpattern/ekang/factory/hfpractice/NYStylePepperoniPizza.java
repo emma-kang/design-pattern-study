@@ -1,4 +1,4 @@
-package com.designpattern.ekang.factory;
+package com.designpattern.ekang.factory.hfpractice;
 
 public class NYStylePepperoniPizza extends Pizza {
     public  NYStylePepperoniPizza() {
