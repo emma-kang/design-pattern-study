@@ -3,10 +3,18 @@ package com.designpattern.ekang.singleton;
 public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
+    private static ChocolateBoiler chocolateBoilerInstance;
 
-    public ChocolateBoiler() {
+    private ChocolateBoiler() {
         empty = true;
         boiled = false;
+    }
+
+    public static ChocolateBoiler getInstance() {
+        if (chocolateBoilerInstance == null)
+            chocolateBoilerInstance = new ChocolateBoiler();
+
+        return chocolateBoilerInstance;
     }
 
     public void fill() {
